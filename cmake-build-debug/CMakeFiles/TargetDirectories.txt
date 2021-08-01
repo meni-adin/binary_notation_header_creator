@@ -1,0 +1,3 @@
+/cygdrive/c/Users/Menachem/Documents/CLionProjects/personal_projects/binary_notation_header_creator/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/cygdrive/c/Users/Menachem/Documents/CLionProjects/personal_projects/binary_notation_header_creator/cmake-build-debug/CMakeFiles/binary_notation_header_creator.dir
+/cygdrive/c/Users/Menachem/Documents/CLionProjects/personal_projects/binary_notation_header_creator/cmake-build-debug/CMakeFiles/edit_cache.dir
