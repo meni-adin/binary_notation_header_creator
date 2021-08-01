@@ -9,7 +9,7 @@
 #define SG_NAME "BINOT_H"
 
 #define CHAR_LEN CHAR_BIT
-#define CHAR_0 "00000000"
+#define CHAR_0 '0'
 
 static void sysErr(const char *caller, const char *callee)
 {
@@ -64,7 +64,12 @@ static void incrementCharBits(char *charBits)
 
 static void writeBasicMacros(FILE *outFile)
 {
-	char charBits[] = CHAR_0;
+	char charBits[CHAR_LEN + 1];
+	for (int i = 0; i < CHAR_LEN; ++i)
+	{
+		charBits[i] = CHAR_0;
+	}
+	charBits[CHAR_LEN] = '\0';
 	for (int i = 0; i < UCHAR_MAX; ++i)
 	{
 		fprintf(outFile, "#define b%s 0x%xu\n", charBits, i);
@@ -86,6 +91,7 @@ static void createBinot(void)
 	writeGuardStart(outFile);
 	writeBasicMacros(outFile);
 	writeGuardEnd(outFile);
+	writeFunctionLikeMacros(outFile);
 	sysMsg("header created successfully");
 }
 
