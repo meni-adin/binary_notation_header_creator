@@ -256,6 +256,5 @@
 #define b11111100 0xfcu
 #define b11111101 0xfdu
 #define b11111110 0xfeu
-#define b11111111 0xffu
 
 #endif //BINOT_H
